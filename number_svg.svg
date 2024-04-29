@@ -1,10 +1,13 @@
-<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
   <!-- Transparent background -->
   <rect width="100%" height="100%" fill="none" />
   
-  <!-- Ellipse -->
-  <ellipse cx="150" cy="150" rx="100" ry="80" fill="#ccc" stroke="#333" stroke-width="3" />
+  <!-- Larger circle to fill up area outside -->
+  <circle cx="32" cy="32" r="30" fill="#fff" />
+  
+  <!-- Smaller ellipse -->
+  <ellipse cx="32" cy="32" rx="24" ry="20" fill="#ccc" stroke="#333" stroke-width="2" />
 
   <!-- Dynamic number -->
-  <text x="150" y="150" text-anchor="middle" alignment-baseline="central" font-family="Arial" font-size="48" fill="#333">123</text>
+  <text x="32" y="32" text-anchor="middle" alignment-baseline="central" font-family="Arial" font-size="20" fill="#333">123</text>
 </svg>
