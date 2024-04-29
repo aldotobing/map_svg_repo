@@ -3,7 +3,7 @@
   <rect width="100%" height="100%" fill="none" />
   
   <!-- Circular shape -->
-  <circle cx="32" cy="32" r="32" fill="#ccc" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="32" cy="32" r="28" fill="#ccc" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
 
   <!-- Dynamic number -->
   <text x="32" y="32" text-anchor="middle" alignment-baseline="central" font-family="Arial" font-size="20" fill="#fff">123</text>
