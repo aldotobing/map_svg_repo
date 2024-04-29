@@ -5,9 +5,6 @@
   <!-- Ellipse -->
   <ellipse cx="150" cy="150" rx="100" ry="80" fill="none" stroke="#333" stroke-width="3" />
 
-  <!-- Circular line -->
-  <circle cx="150" cy="150" r="90" fill="none" stroke="#333" stroke-width="3" />
-
   <!-- Dynamic number -->
-  <text x="150" y="150" text-anchor="middle" alignment-baseline="central" font-family="Arial" font-size="40" fill="#333">123</text>
+  <text x="150" y="150" text-anchor="middle" alignment-baseline="central" font-family="Arial" font-size="48" fill="#333">123</text>
 </svg>
