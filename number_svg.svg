@@ -1,32 +1,40 @@
-<svg id="numberCircle" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+<svg id="mapPin" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
   <!-- Transparent background -->
   <rect width="100%" height="100%" fill="none" />
 
-  <!-- Semi-ellipse shape -->
-  <path id="semiEllipse" d="M32 4a28 28 0 0 1 28 28h-56a28 28 0 0 1 28-28z" fill="#ccc" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Pin shape -->
+  <path id="pinPath" d="M32 4L8 32h48L32 4z" fill="#ff0000" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <path id="pinStem" d="M32 32v28" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 
   <!-- Dynamic number -->
-  <text id="number" x="32" y="32" text-anchor="middle" alignment-baseline="central" font-family="Arial" font-size="20" fill="#fff">123</text>
+  <text id="number" x="32" y="24" text-anchor="middle" alignment-baseline="central" font-family="Arial" font-size="20" fill="#fff">123</text>
 
   <script>
-    const svgElement = document.getElementById('numberCircle');
-    const semiEllipseElement = document.getElementById('semiEllipse');
+    const svgElement = document.getElementById('mapPin');
+    const pinPathElement = document.getElementById('pinPath');
+    const pinStemElement = document.getElementById('pinStem');
     const numberElement = document.getElementById('number');
 
-    // Function to adjust the semi-ellipse path based on the text width
-    function adjustSemiEllipsePath(text) {
+    // Function to adjust the pin shape based on the text width
+    function adjustPinShape(text) {
       const textWidth = numberElement.getComputedTextLength();
       const radius = textWidth / 2 + 8; // Add 8 to account for some padding
-      const pathData = `M${radius + 4} 32a${radius} ${radius / 2} 0 0 1 ${radius * 2} 0h-${radius * 2}a${radius} ${radius / 2} 0 0 1 ${radius * 2} 0z`;
-      semiEllipseElement.setAttribute('d', pathData);
+      const pinPathData = `M${radius + 4} 32L${radius + 4} 4h-${radius * 2}v28h${radius * 2}z`;
+      pinPathElement.setAttribute('d', pinPathData);
+      pinStemElement.setAttribute('d', `M${radius + 4} 32v28`);
     }
 
     // Initial adjustment
-    adjustSemiEllipsePath(numberElement.textContent);
+    adjustPinShape(numberElement.textContent);
 
     // Adjustment on text change
     numberElement.addEventListener('DOMCharacterDataModified', () => {
-      adjustSemiEllipsePath(numberElement.textContent);
+      adjustPinShape(numberElement.textContent);
     });
+
+    // Color change function
+    function changeColor(color) {
+      pinPathElement.setAttribute('fill', color);
+    }
   </script>
 </svg>
