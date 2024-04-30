@@ -1,10 +1,33 @@
-<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+<svg id="numberCircle" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
   <!-- Transparent background -->
   <rect width="100%" height="100%" fill="none" />
-  
+
   <!-- Circular shape -->
-  <circle cx="32" cy="32" r="28" fill="#ccc" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  <circle id="circle" cx="32" cy="32" r="28" fill="#ccc" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
 
   <!-- Dynamic number -->
-  <text x="32" y="32" text-anchor="middle" alignment-baseline="central" font-family="Arial" font-size="20" fill="#fff">123</text>
+  <text id="number" x="32" y="32" text-anchor="middle" alignment-baseline="central" font-family="Arial" font-size="20" fill="#fff">123</text>
+
+  <script>
+    const svgElement = document.getElementById('numberCircle');
+    const circleElement = document.getElementById('circle');
+    const numberElement = document.getElementById('number');
+
+    // Function to adjust the circle radius based on the text width
+    function adjustCircleRadius(text) {
+      const textWidth = numberElement.getComputedTextLength();
+      const radius = textWidth / 2 + 8; // Add 8 to account for some padding
+      circleElement.setAttribute('r', radius);
+      circleElement.setAttribute('cx', radius + 4); // Adjust the circle's center based on the radius
+      circleElement.setAttribute('cy', 32); // Keep the circle's vertical center
+    }
+
+    // Initial adjustment
+    adjustCircleRadius(numberElement.textContent);
+
+    // Adjustment on text change
+    numberElement.addEventListener('DOMCharacterDataModified', () => {
+      adjustCircleRadius(numberElement.textContent);
+    });
+  </script>
 </svg>
