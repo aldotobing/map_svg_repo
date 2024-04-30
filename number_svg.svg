@@ -2,32 +2,31 @@
   <!-- Transparent background -->
   <rect width="100%" height="100%" fill="none" />
 
-  <!-- Circular shape -->
-  <circle id="circle" cx="32" cy="32" r="28" fill="#ccc" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Semi-ellipse shape -->
+  <path id="semiEllipse" d="M32 4a28 28 0 0 1 28 28h-56a28 28 0 0 1 28-28z" fill="#ccc" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 
   <!-- Dynamic number -->
   <text id="number" x="32" y="32" text-anchor="middle" alignment-baseline="central" font-family="Arial" font-size="20" fill="#fff">123</text>
 
   <script>
     const svgElement = document.getElementById('numberCircle');
-    const circleElement = document.getElementById('circle');
+    const semiEllipseElement = document.getElementById('semiEllipse');
     const numberElement = document.getElementById('number');
 
-    // Function to adjust the circle radius based on the text width
-    function adjustCircleRadius(text) {
+    // Function to adjust the semi-ellipse path based on the text width
+    function adjustSemiEllipsePath(text) {
       const textWidth = numberElement.getComputedTextLength();
       const radius = textWidth / 2 + 8; // Add 8 to account for some padding
-      circleElement.setAttribute('r', radius);
-      circleElement.setAttribute('cx', radius + 4); // Adjust the circle's center based on the radius
-      circleElement.setAttribute('cy', 32); // Keep the circle's vertical center
+      const pathData = `M${radius + 4} 32a${radius} ${radius / 2} 0 0 1 ${radius * 2} 0h-${radius * 2}a${radius} ${radius / 2} 0 0 1 ${radius * 2} 0z`;
+      semiEllipseElement.setAttribute('d', pathData);
     }
 
     // Initial adjustment
-    adjustCircleRadius(numberElement.textContent);
+    adjustSemiEllipsePath(numberElement.textContent);
 
     // Adjustment on text change
     numberElement.addEventListener('DOMCharacterDataModified', () => {
-      adjustCircleRadius(numberElement.textContent);
+      adjustSemiEllipsePath(numberElement.textContent);
     });
   </script>
 </svg>
