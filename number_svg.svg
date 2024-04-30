@@ -8,32 +8,29 @@
 
   <!-- Pin shape -->
   <path id="pinPath" d="M32 4C19.2 4 8.8 16.8 8.8 30.4c0 12 18.4 27.2 21.6 32a2.4 2.4 0 0 0 3.2 0c3.2-4.8 21.6-20 21.6-32C55.2 16.8 44.8 4 32 4z" fill="url(#grad1)" stroke="#000000" stroke-width="1" />
-  <path id="pinStem" d="M32 18a8 8 0 1 0 0 16 8 8 0 0 0 0-16z" fill="#ffffff" stroke="#000000" stroke-width="1" />
 
   <!-- Dynamic number -->
-  <text id="number" x="50%" y="50%" text-anchor="middle" dominant-baseline="central" font-family="Arial" font-size="16" fill="#000000">123</text>
+  <text id="number" x="50%" y="50%" text-anchor="middle" dominant-baseline="central" font-family="Arial" font-size="16" fill="#ffffff">123</text>
 
   <script>
     const svgElement = document.getElementById('mapPin');
     const pinPathElement = document.getElementById('pinPath');
-    const pinStemElement = document.getElementById('pinStem');
     const numberElement = document.getElementById('number');
-
-    // Function to adjust the pin stem based on the text width
-    function adjustPinStem(text) {
-      const textWidth = numberElement.getComputedTextLength();
-      const radius = textWidth / 2 + 8; // Add 8 to account for some padding
-      const pinStemData = `M${32} ${32 - radius}a${radius} ${radius} 0 1 0 ${radius * 2} 0 ${radius} ${radius} 0 1 0 -${radius * 2} 0z`;
-      pinStemElement.setAttribute('d', pinStemData);
-    }
-
-    // Initial adjustment
-    adjustPinStem(numberElement.textContent);
 
     // Adjustment on text change
     numberElement.addEventListener('DOMCharacterDataModified', () => {
-      adjustPinStem(numberElement.textContent);
+      adjustNumberPosition(numberElement.textContent);
     });
+
+    // Function to adjust the number position based on its width
+    function adjustNumberPosition(text) {
+      const textWidth = numberElement.getComputedTextLength();
+      const radius = textWidth / 2 + 8; // Add 8 to account for some padding
+      numberElement.setAttribute('x', `${radius + 4}`);
+    }
+
+    // Initial adjustment
+    adjustNumberPosition(numberElement.textContent);
 
     // Color change function
     function changeColor(color) {
