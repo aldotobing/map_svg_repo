@@ -13,7 +13,7 @@
   <g id="SVGRepo_iconCarrier">
     <!-- Modified pin shape to match the provided SVG -->
     <path d="M256,0C160.798,0,83.644,77.155,83.644,172.356c0,97.162,48.158,117.862,101.386,182.495 C248.696,432.161,256,512,256,512s7.304-79.839,70.97-157.148c53.228-64.634,101.386-85.334,101.386-182.495 C428.356,77.155,351.202,0,256,0z M256,231.921c-32.897,0-59.564-26.668-59.564-59.564s26.668-59.564,59.564-59.564 c32.896,0,59.564,26.668,59.564,59.564S288.896,231.921,256,231.921z" fill="url(#grad1)" stroke="#ffffff" stroke-width="2"/> <!-- Changed stroke color to white -->
-<!--     <radialGradient id="grad1" cx="256" cy="256" r="256" fx="256" fy="256"> -->
+    <radialGradient id="grad1" cx="256" cy="256" r="256" fx="256" fy="256">
       <stop offset="0%" style="stop-color:#ff6666" />
       <stop offset="100%" style="stop-color:#ff0000" />
     </radialGradient>
