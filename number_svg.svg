@@ -10,7 +10,7 @@
   <path id="pinPath" d="M32 4C19.2 4 8.8 16.8 8.8 30.4c0 12 18.4 27.2 21.6 32a2.4 2.4 0 0 0 3.2 0c3.2-4.8 21.6-20 21.6-32C55.2 16.8 44.8 4 32 4z" fill="url(#grad1)" stroke="#ffffff" stroke-width="1" />
 
   <!-- Dynamic number, with Roboto font -->
-  <text id="number" x="50%" y="45%" text-anchor="middle" dominant-baseline="central" font-family="'Roboto', Arial" font-size="18" fill="#000000">123</text>
+  <text id="number" x="50%" y="45%" text-anchor="middle" dominant-baseline="central" font-family="'Roboto', Arial" font-size="18" fill="#000000" font-weight="bold">123</text>
 
   <script>
     const svgElement = document.getElementById('mapPin');
