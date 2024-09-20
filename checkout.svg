@@ -1,12 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <!-- Background Circle -->
-  <circle cx="32" cy="32" r="32" fill="#FF0000"/> <!-- Warna merah untuk checkout -->
-
-  <!-- Checkout Icon -->
-  <path d="M16 32L28 44L48 24" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
-  
-  <!-- Clock Symbol for Checkout -->
-  <circle cx="32" cy="32" r="10" fill="white"/>
-  <line x1="32" y1="32" x2="32" y2="25" stroke="#FF0000" stroke-width="2"/>
-  <line x1="32" y1="32" x2="37" y2="32" stroke="#FF0000" stroke-width="2"/>
+<svg
+    width="48"
+    height="48"
+    viewBox="0 0 48 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Pin Shape -->
+    <path
+        d="M24 0C13.059 0 4 9.059 4 20C4 29.12 12.42 36.53 22.22 47.33C22.89 48.03 23.89 48.03 24.56 47.33C34.36 36.53 42.78 29.12 42.78 20C42.78 9.059 33.72 0 24 0Z"
+        fill="#FF6347"/> <!-- Mengganti warna menjadi merah checkout -->
+    
+    <!-- Checkout Icon (Different from Check-in) -->
+    <path
+        d="M32 15H16C15.4477 15 15 15.4477 15 16V20C15 20.5523 15.4477 21 16 21H32C32.5523 21 33 20.5523 33 20V16C33 15.4477 32.5523 15 32 15Z"
+        fill="#fff"/> <!-- Mengganti ikon menjadi simbol "checkout" -->
+    
+    <!-- Cross (X) Symbol to represent the end or checkout -->
+    <path
+        d="M30 23L18 35"
+        stroke="#fff"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+    <path
+        d="M18 23L30 35"
+        stroke="#fff"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
 </svg>
