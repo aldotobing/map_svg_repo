@@ -7,22 +7,22 @@
     <!-- Background Pin Shape -->
     <path
         d="M24 0C13.059 0 4 9.059 4 20C4 29.12 12.42 36.53 22.22 47.33C22.89 48.03 23.89 48.03 24.56 47.33C34.36 36.53 42.78 29.12 42.78 20C42.78 9.059 33.72 0 24 0Z"
-        fill="#FF6347"/> <!-- Mengganti warna menjadi merah checkout -->
+        fill="#FF6347"/> <!-- Warna checkout tetap merah -->
     
-    <!-- Logout Icon (Simple Door-like Shape) -->
+    <!-- Logout Icon (Larger and Shifted Up) -->
     <path
-        d="M18 16H30C30.5523 16 31 16.4477 31 17V31C31 31.5523 30.5523 32 30 32H18C17.4477 32 17 31.5523 17 31V17C17 16.4477 17.4477 16 18 16Z"
+        d="M16 14H32C32.5523 14 33 14.4477 33 15V31C33 31.5523 32.5523 32 32 32H16C15.4477 32 15 31.5523 15 31V15C15 14.4477 15.4477 14 16 14Z"
         fill="#fff"/>
     
     <!-- Arrow Symbol (Logout) -->
     <path
-        d="M26 21L22 24L26 27"
+        d="M26 19L22 23L26 27"
         stroke="#FF6347"
         stroke-width="3"
         stroke-linecap="round"
         stroke-linejoin="round"/>
     <path
-        d="M22 24H29"
+        d="M22 23H29"
         stroke="#FF6347"
         stroke-width="3"
         stroke-linecap="round"
