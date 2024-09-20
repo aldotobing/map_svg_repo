@@ -9,21 +9,21 @@
         d="M24 0C13.059 0 4 9.059 4 20C4 29.12 12.42 36.53 22.22 47.33C22.89 48.03 23.89 48.03 24.56 47.33C34.36 36.53 42.78 29.12 42.78 20C42.78 9.059 33.72 0 24 0Z"
         fill="#FF6347"/> <!-- Mengganti warna menjadi merah checkout -->
     
-    <!-- Checkout Icon (Different from Check-in) -->
+    <!-- Logout Icon (Simple Door-like Shape) -->
     <path
-        d="M32 15H16C15.4477 15 15 15.4477 15 16V20C15 20.5523 15.4477 21 16 21H32C32.5523 21 33 20.5523 33 20V16C33 15.4477 32.5523 15 32 15Z"
-        fill="#fff"/> <!-- Mengganti ikon menjadi simbol "checkout" -->
+        d="M18 16H30C30.5523 16 31 16.4477 31 17V31C31 31.5523 30.5523 32 30 32H18C17.4477 32 17 31.5523 17 31V17C17 16.4477 17.4477 16 18 16Z"
+        fill="#fff"/>
     
-    <!-- Cross (X) Symbol to represent the end or checkout -->
+    <!-- Arrow Symbol (Logout) -->
     <path
-        d="M30 23L18 35"
-        stroke="#fff"
+        d="M26 21L22 24L26 27"
+        stroke="#FF6347"
         stroke-width="3"
         stroke-linecap="round"
         stroke-linejoin="round"/>
     <path
-        d="M18 23L30 35"
-        stroke="#fff"
+        d="M22 24H29"
+        stroke="#FF6347"
         stroke-width="3"
         stroke-linecap="round"
         stroke-linejoin="round"/>
